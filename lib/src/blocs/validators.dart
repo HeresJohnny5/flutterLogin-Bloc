@@ -1,8 +1,8 @@
 import 'dart:async';
-import 'block.dart';
+import 'bloc.dart';
 
 class Validators {
-  final validateEmail = StreamTransformer<String, String>.fromHandlers( // the first argument is the input type of data, whereas the second argument is the output type
+  final validateEmail = StreamTransformer<String, String>.fromHandlers( // the first argument String is the input type of data, whereas the second argument String is the output type
     handleData: (email, sink) {
       if (email.contains('@')) {
         sink.add(email);
